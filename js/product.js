@@ -136,7 +136,8 @@ app.component('productModal',{
           <div class="col-sm-4">
             <div class="form-group">
               <label for="imageUrl">主要圖片</label>
-              <input v-model="tempProduct.imageUrl" type="text" class="form-control" placeholder="請輸入圖片連結">
+              <input v-model="tempProduct.imageUrl" type="text" class="form-control" placeholder="請輸入圖片連結"
+              id="imageUrl">
               <img class="img-fluid" :src="tempProduct.imageUrl">
             </div>
             <div class="mb-1">多圖新增</div>
@@ -146,7 +147,7 @@ app.component('productModal',{
                 <div class="form-group">
                   <label for="imageUrl">圖片網址</label>
                   <input v-model="tempProduct.imagesUrl[key]" type="text" class="form-control"
-                    placeholder="請輸入圖片連結">
+                    placeholder="請輸入圖片連結" id="imageUrl">
                 </div>
                 <img class="img-fluid" :src="image">
               </div>
@@ -185,7 +186,7 @@ app.component('productModal',{
                   placeholder="請輸入分類">
               </div>
               <div class="form-group col-md-6">
-                <label for="price">單位</label>
+                <label for="unit">單位</label>
                 <input id="unit" v-model="tempProduct.unit" type="text" class="form-control" placeholder="請輸入單位">
               </div>
             </div>
@@ -211,7 +212,7 @@ app.component('productModal',{
             </textarea>
             </div>
             <div class="form-group">
-              <label for="content">說明內容</label>
+              <label for="description">說明內容</label>
               <textarea id="description" v-model="tempProduct.content" type="text" class="form-control"
                 placeholder="請輸入說明內容">
             </textarea>
